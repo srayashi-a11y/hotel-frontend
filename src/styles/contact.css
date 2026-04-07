@@ -1,0 +1,123 @@
+.contact-sec { width:100%; height:auto; }
+
+.contact-sec-top{ margin-bottom:51px; display:flex; flex-wrap:wrap; gap:20px; }
+
+.contact-sec-top01,
+.contact-sec-top02,
+.contact-sec-top03{
+  width:30%;
+}
+
+.contact-sec-top-box{
+  width:100%;
+  background:#FFF;
+  min-height:100px;
+}
+
+.contact-sec-top-box01{
+  width:25%;
+  background:#bb875f;
+  min-height:100px;
+  float:left;
+  text-align:center;
+  position:relative;
+}
+
+.contact-sec-top-box01::after{
+  content:'';
+  background:url('/images/contact-aero.png') no-repeat;
+  width:7px;
+  height:16px;
+  position:absolute;
+  right:-7px;
+  top:40%;
+}
+
+.contact-sec-top-box02{
+  width:75%;
+  float:right;
+  padding:10px;
+}
+
+.contact-sec-middle{ margin-bottom:70px; }
+
+.contact-sec-middle h2{
+  font-size:27px;
+  margin-bottom:16px;
+}
+
+.contact-sec-middle input,
+.contact-sec-middle textarea{
+  background:#f5f5f5;
+  border:1px solid #868686;
+  border-radius:6px;
+}
+
+.contact-sec-middle input[type="text"],
+.contact-sec-middle input[type="tel"],
+.contact-sec-middle input[type="email"]{
+  width:30%;
+  min-height:45px;
+  float:left;
+  padding:0 2%;
+  margin-bottom:23px;
+}
+
+.contact-sec-middle input[type="tel"]{ margin-left:4%; }
+.contact-sec-middle input[type="email"]{     margin-left: 4%; }
+
+.contact-sec-middle textarea{
+  width:100%;
+  min-height:130px;
+  padding:10px;
+}
+
+.contact-sec-middle input[type="submit"]{
+  background:#90471a;
+  color:#FFF;
+  padding:12px 40px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+      margin-top: 15px;
+}
+
+.contact-sec-bottom iframe{ min-height:480px; }
+.message {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ✅ SUCCESS */
+.message.success {
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* ❌ ERROR */
+.message.error {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 6px;
+}
+/* 🔥 RESPONSIVE FIX */
+@media (max-width: 768px){
+
+  .contact-sec-top01,
+  .contact-sec-top02,
+  .contact-sec-top03{
+    width:100%;
+  }
+
+  .contact-sec-middle input[type="text"],
+  .contact-sec-middle input[type="tel"],
+  .contact-sec-middle input[type="email"]{
+    width:100%;
+    float:none;
+    margin-left:0;
+  }
+}

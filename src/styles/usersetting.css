@@ -1,0 +1,157 @@
+
+                    .settings-modern {
+                padding: 40px;
+                background: #f9fafb;
+                font-family: 'Inter', sans-serif;
+                }
+
+                /* SECTION */
+                .section1 {
+                margin-bottom: 50px;
+                border-bottom: 3px solid #022364;
+                padding-bottom: 30px;
+                }
+
+                /* TITLE */
+                .section1 h3 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #111827;
+                position: relative;
+                display: inline-block;
+                }
+
+                .section1 h3::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -11px;
+                width: 60%;
+                height: 3px;
+                background: linear-gradient(90deg, #bdab02, transparent);
+                border-radius: 10px;
+                }
+
+                /* ROW */
+                .row {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                }
+
+                /* FIELD */
+                .field {
+                flex: 1;
+                min-width: 250px;
+                }
+
+                /* INPUT */
+                
+
+                /* BUTTON */
+                button {
+                margin-top: 15px !important;
+                padding: 10px 18px;
+                border-radius: 8px !important;
+                border: none;
+                cursor: pointer;
+                font-weight: 500;
+                }
+
+                .primary {
+                background: #111827;
+                color: white;
+                }
+
+                .primary:hover {
+                background: #000;
+                }
+
+                .danger {
+                background: #ef4444;
+                color: white;
+                }
+
+                /* INSIGHTS */
+                .insight,
+                .insight1,
+                .insight2 {
+                padding: 12px;
+                border-radius: 10px;
+                margin-top: 10px;
+                }
+
+                .insight {
+                background: #ffffff;
+                border: 1px solid #c2f5dee0;
+                }
+
+                .insight1 {
+                background: #c5ddff;
+                border: 1px solid #5143be;
+                }
+
+                .insight2 {
+                background: #ddf6ae;
+                border: 1px solid #44c95d;
+                }
+
+                .subtle {
+                color: #6b7280;
+                font-size: 14px;
+                }
+
+                /* 🔥 MOBILE RESPONSIVE FIX */
+                @media (max-width: 768px) {
+
+                .settings-modern {
+                    padding: 15px;
+                }
+
+                .section1 {
+                    margin-bottom: 35px;
+                    padding-bottom: 20px;
+                }
+
+                .row {
+                    flex-direction: column; /* IMPORTANT */
+                    gap: 12px;
+                }
+
+                .field {
+                    min-width: 100%;
+                }
+
+                input {
+                    padding: 10px;
+                    font-size: 14px;
+                }
+
+                button {
+                    width: 100%;
+                    font-size: 14px;
+                }
+
+                .section h3 {
+                    font-size: 18px;
+                }
+
+                .insight,
+                .insight1,
+                .insight2 {
+                    font-size: 14px;
+                }
+                }
+
+                /* extra small phones */
+                @media (max-width: 480px) {
+                .settings-modern {
+                    padding: 12px;
+                }
+
+                .section1 h3::after {
+                    width: 40%;
+                }
+                }
+    

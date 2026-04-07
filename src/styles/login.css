@@ -1,0 +1,101 @@
+body{
+background:#fffaf3;
+font-family:'Poppins', sans-serif;
+}
+
+/* Login container */
+.login-wrapper{
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#ffffff,#f8f1e7);
+}
+
+/* Login card */
+.login-card{
+background:#ffffff;
+padding:40px;
+border-radius:12px;
+box-shadow:0 12px 35px rgba(0,0,0,0.08);
+max-width:420px;
+width:100%;
+transition:0.3s;
+margin-bottom: 60px;
+margin-top: 60px;
+}
+
+/* Card hover effect */
+.login-card:hover{
+transform:translateY(-3px);
+}
+
+/* Title */
+.login-title{
+text-align:center;
+margin-bottom:25px;
+color:#7a5c3e;
+font-family:'Playfair Display', serif;
+font-weight:600;
+letter-spacing:1px;
+}
+
+/* Inputs */
+.login-card input{
+border-radius:6px;
+border:1px solid #e6d5c3;
+padding:10px;
+font-family:'Poppins', sans-serif;
+}
+
+/* Focus effect */
+.login-card input:focus{
+border-color:#d6a97a;
+box-shadow:0 0 5px rgba(214,169,122,0.4);
+}
+
+/* Button */
+.login-btn{
+background:#d6a97a;
+border:none;
+width:100%;
+padding:10px;
+font-weight:500;
+border-radius:5px;
+font-family:'Poppins', sans-serif;
+transition:0.3s;
+}
+
+.login-btn:hover{
+background:#b1865a;
+transform:scale(1.02);
+}
+
+/* Mobile responsive */
+@media (max-width:768px){
+
+.login-card{
+padding:25px;
+margin:20px;
+}
+
+.login-title{
+font-size:24px;
+}
+
+}
+.auth-switch{
+text-align:center;
+margin-top:15px;
+font-size:14px;
+}
+
+.auth-switch a{
+color:#c8a96a;
+font-weight:500;
+text-decoration:none;
+margin-left:5px;
+}
+
+.auth-switch a:hover{
+text-decoration:underline;
+}

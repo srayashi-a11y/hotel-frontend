@@ -1,0 +1,143 @@
+.roomoptions-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.roomoptions-popup{
+background:#fffaf3;
+width:520px;
+max-width:95%;
+padding:32px;
+position:relative;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.roomoptions-title{
+text-align:center;
+margin-bottom:15px;
+font-weight:600;
+color:#1f2937;
+}
+
+.roomoptions-close{
+position:absolute;
+top:12px;
+right:18px;
+background:none;
+border:none;
+font-size:24px;
+cursor:pointer;
+color:#444;
+}
+
+.option-heading{
+margin:10px 0;
+color:#374151;
+font-size:16px;
+}
+
+/* OPTION ROW */
+
+.option-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 12px;
+margin:6px 0;
+border-radius:8px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.option-row:hover{
+background:#f3f4f6;
+}
+
+.option-left{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:15px;
+}
+
+/* PRICE RIGHT */
+
+.option-price{
+font-weight:600;
+color:#c72721;
+}
+
+.option-price.free{
+color:#10b981;
+}
+
+/* BOTTOM */
+
+.roomoptions-bottom{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+}
+
+.price-box p{
+margin:0;
+color:#777;
+font-size:13px;
+}
+
+.price-box h2{
+margin:0;
+font-size:26px;
+color:#1f2937;
+}
+
+/* BUTTON */
+
+.roomoptions-btn{
+background:#052b5f;
+color:white;
+border:none;
+padding:12px 22px;
+border-radius:1px;
+font-size:15px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.roomoptions-btn:hover{
+background:#001e57;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.roomoptions-bottom{
+flex-direction:column;
+gap:15px;
+}
+
+.roomoptions-btn{
+width:100%;
+}
+
+}
+/* selected option */
+
+.active-option{
+background:#edf5ffe8;
+/* border:1px solid #8490a3; */
+}
+
+.active-option:hover{
+background:#dbeafe;
+}

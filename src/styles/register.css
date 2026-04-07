@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+body{
+background:#fffaf3;
+font-family:'Poppins', sans-serif;
+}
+
+/* Register wrapper full width */
+.register-wrapper{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#ffffff,#f8f1e7);
+width:100%;
+}
+
+/* Register card fixed width like login */
+.register-card{
+background:#ffffff;
+padding:40px;
+border-radius:12px;
+box-shadow:0 12px 35px rgba(0,0,0,0.08);
+
+width:500px;          /* fixed desktop width */
+max-width:95%;        /* prevent overflow on small screens */
+
+transition:0.3s;
+margin:auto;
+}
+
+/* hover effect */
+.register-card:hover{
+transform:translateY(-3px);
+}
+
+/* Title */
+.register-title{
+text-align:center;
+margin-bottom:25px;
+color:#7a5c3e;
+font-family:'Playfair Display', serif;
+font-weight:600;
+letter-spacing:1px;
+}
+
+/* Inputs */
+.register-card input{
+border-radius:6px;
+border:1px solid #e6d5c3;
+padding:10px;
+font-family:'Poppins', sans-serif;
+}
+
+/* focus */
+.register-card input:focus{
+border-color:#d6a97a;
+box-shadow:0 0 5px rgba(214,169,122,0.4);
+}
+
+/* Button */
+.register-btn{
+background:#d6a97a;
+border:none;
+width:100%;
+padding:10px;
+font-weight:500;
+border-radius:5px;
+font-family:'Poppins', sans-serif;
+transition:0.3s;
+}
+
+.register-btn:hover{
+background:#b1865a;
+transform:scale(1.02);
+}
+
+/* Tablet */
+@media (max-width:768px){
+
+.register-card{
+padding:25px;
+width:90%;
+}
+
+.register-title{
+font-size:24px;
+}
+
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+.register-card{
+width:95%;
+padding:20px;
+}
+
+}
+.auth-switch{
+text-align:center;
+margin-top:15px;
+font-size:14px;
+}
+
+.auth-switch a{
+color:#c8a96a;
+font-weight:500;
+text-decoration:none;
+margin-left:5px;
+}
+
+.auth-switch a:hover{
+text-decoration:underline;
+}

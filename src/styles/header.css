@@ -1,0 +1,128 @@
+/* MOBILE BREADCRUMB MENU */
+.mobile-breadcrumb {
+  display: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.breadcrumb-btn {
+  background: #263238;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+/* Dropdown */
+.mobile-menu-dropdown {
+  display: none;
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-menu-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu-dropdown ul li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-dropdown ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* SHOW MENU */
+.show-menu {
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  #cssmenu {
+    display: none; /* hide desktop menu */
+  }
+
+  .mobile-breadcrumb {
+    display: block;
+  }
+
+  .logo-section {
+    text-align: center;
+  }
+
+  .banner-right {
+    justify-content: center !important;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 991px) {
+
+  /* 🔥 Make header single row */
+  header .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  /* 🔥 Remove bootstrap column behavior */
+  .col-md-2,
+  .col-md-8,
+  .col-sm-2,
+  .col-sm-8 {
+    width: auto !important;
+    flex: none !important;
+    max-width: none !important;
+  }
+
+  /* LOGO */
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-section img {
+    max-width: 120px;
+  }
+
+  /* RIGHT SIDE BUTTONS */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 0 !important; /* 🔥 remove breaking */
+  }
+
+  .header-actions a,
+  .header-actions button {
+    font-size: 12px !important;
+    padding: 5px 8px !important;
+    white-space: nowrap;
+  }
+
+  /* 🔥 HIDE mobile breadcrumb completely from top */
+ 
+
+}
+.banner-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.banner-right > div {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap; /* 🔥 prevent line break */
+}

@@ -1,0 +1,253 @@
+.booking-page{
+background:#fffaf3;
+padding:40px 20px;
+}
+
+.booking-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+gap:30px;
+}
+
+.booking-left{
+width:60%;
+background:white;
+padding:30px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.booking-right{
+width:40%;
+}
+
+.booking-summary{
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.summary-header{
+background:#052b5f;
+color:white;
+padding:15px;
+font-weight:600;
+}
+
+.summary-body{
+padding:20px;
+}
+
+.summary-dates{
+font-weight:600;
+margin-bottom:15px;
+}
+
+.summary-room{
+display:flex;
+gap:10px;
+margin-bottom:10px;
+}
+.text{
+    color:green;
+}
+.summary-room img{
+width:60px;
+height:50px;
+object-fit:cover;
+}
+
+.summary-price{
+display:flex;
+justify-content:space-between;
+margin-top:20px;
+font-size:18px;
+color:red;
+}
+.price-dashed{
+border-top:2px dashed #1e40af;
+margin:15px 0;
+}
+
+.summary-tax{
+display:flex;
+justify-content:space-between;
+font-size:14px;
+color:#555;
+text-decoration:underline dashed #999;
+}
+
+.price-divider{
+border-top:1px solid #ddd;
+margin:15px 0;
+}
+
+.summary-total{
+display:flex;
+justify-content:space-between;
+font-size:20px;
+}
+@media(max-width:900px){
+
+.booking-container{
+flex-direction:column;
+}
+
+.booking-left,
+.booking-right{
+width:100%;
+}
+
+}
+.summary-tax{
+display:flex;
+justify-content:space-between;
+font-size:14px;
+color:#555;
+text-decoration:underline dashed #999;
+cursor:pointer;
+}
+
+.summary-tax:hover{
+color:#052b5f;
+}
+.guest-box{
+    width:60%;
+background:white;
+border:1px solid #e5e5e5;
+}
+
+.guest-header{
+background:#f5f7fa;
+padding:15px;
+font-weight:600;
+border-bottom:1px solid #e5e5e5;
+}
+
+.guest-body{
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+    box-shadow: 0px 0px 10px #00000033;
+    margin-bottom:20px;
+}
+
+.row-two{
+display:flex;
+gap:10px;
+}
+
+.row-two input{
+flex:1;
+}
+
+.phone-row{
+display:flex;
+gap:10px;
+}
+
+.phone-row select{
+width:120px;
+}
+
+.guest-body input,
+.guest-body select{
+padding:10px;
+border:1px solid #ddd;
+border-radius:4px;
+font-size:14px;
+}
+
+.confirm-btn{
+margin-top:10px;
+background:#052b5f;
+color:white;
+border:none;
+padding:12px;
+font-size:15px;
+cursor:pointer;
+width:100%;
+}
+
+.confirm-btn:hover{
+background:#001e57;
+}
+.radio-row{
+display:flex;
+width:100%;
+gap:10px;
+}
+
+.radio-option{
+width:50%;
+border:1px solid #ccc;
+padding:10px;
+display:flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.row-two{
+flex-direction:column;
+}
+
+.phone-row{
+flex-direction:column;
+}
+
+.phone-row select{
+width:100%;
+}
+
+}
+.payment-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.secure-tag{
+background:#d4edda;
+color:#155724;
+padding:5px 10px;
+border-radius:6px;
+font-size:13px;
+}
+
+.billing-title{
+margin-top:20px;
+margin-bottom:10px;
+font-weight:600;
+}
+
+.guest-body input,
+.guest-body select{
+
+padding:12px;
+border:1px solid #ddd;
+border-radius:4px;
+font-size:14px;
+}
+
+.row-two{
+display:flex;
+gap:10px;
+}
+
+@media(max-width:768px){
+
+.row-two{
+flex-direction:column;
+}
+
+}
+.booking-modal {
+  max-height: 90vh;   /* 🔥 LIMIT HEIGHT */
+  overflow-y: auto;   /* 🔥 ENABLE SCROLL */
+}

@@ -1,0 +1,231 @@
+@media only screen and (min-width:768px) and (max-width:1169px) {
+img{max-width:100%; height:auto;}
+#cssmenu > ul > li > a{font-size:14px; line-height:55px; padding:0px 4px;}
+header{ padding-bottom:8px;}
+
+.banner-section .full-img-text h1{ font-size:45px; line-height:54px; margin-bottom:6px;}
+.banner-section .full-img-text h1 span{ font-size:45px; line-height:54px;}
+.banner-section .full-img-text h5{font-size:16px; line-height:20px; margin-bottom:15px;}
+.banner-section .full-img-text h6 a{ font-size:15px; line-height:22px; padding:8px 16px;}
+.banner-section .bx-prev{ left:1%;}
+.banner-section .bx-next{ right:1%;}
+.register a{ border:1px solid #313d43!important; -webkit-border-radius:15px;-moz-border-radius:15px; border-radius:15px; font-size:15px!important; line-height:25px!important; padding:7px 18px!important;}
+
+.homesection02{ padding:18px 0px;}
+.homesection02 h2{ font-size:30px; line-height:normal;}
+.homesection02 h6{ font-size:18px; line-height:normal;}
+.homesection02 ul li{ font-size:14px; line-height:normal;}
+
+.homesection03-left ul li{ font-size:15px; line-height:normal;}
+.homesection03-right ul li{ font-size:15px; line-height:normal;}
+.teamsection-left img{ width:90px; height:90px;}
+.teamsection-right{ width:74%;}
+.teamsection-left{ width:24%;}
+.teamsection-right p{ font-size:13px; line-height:normal;}
+.teamsection-right h5{ font-size:14px;}
+
+
+
+
+
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+img{max-width:100%; height:auto;}
+
+header{border:none;}
+.logo-section{margin:0px auto 10px; width:50%;}
+.location-sec{margin:0px auto; float:none;}
+#cssmenu{margin-bottom:0px;}
+.call-section{ display:none;}
+#cssmenu #menu-button{margin:0px; width:45px; height:38px; z-index:9; top:-6px;}
+#cssmenu #menu-button::before{top:12px; right:12px;}
+#cssmenu #menu-button::after{top:18px; right:12px;}
+#cssmenu.align-center > ul{top:0px;}
+#cssmenu #menu-button.menu-opened::before{top:18px;}
+#cssmenu #menu-button.menu-opened::after{top:18px;}
+
+.cbp-af-header{ position:static;}
+.cbp-af-header.cbp-af-header-shrink{}
+.register a{ border:1px solid #313d43!important; background:#313d43!important; -webkit-border-radius:20px;-moz-border-radius:20px; border-radius:20px;}
+.banner-section .full-img-text h1{ font-size:45px; line-height:54px; margin-bottom:6px;}
+.banner-section .full-img-text h1 span{ font-size:45px; line-height:54px;}
+.banner-section .full-img-text h5{font-size:16px; line-height:20px; margin-bottom:15px;}
+.banner-section .full-img-text h6 a{ font-size:15px; line-height:22px; padding:8px 16px;}
+.banner-section .bx-prev{ left:1%;}
+.banner-section .bx-next{ right:1%;}
+
+.homesection02{ padding:20px 0px;}
+.homesection02 h2{ font-size:21px; line-height:28px;}
+.homesection02 h6{ font-size:15px; line-height:normal; font-weight:400; margin-bottom:15px;}
+
+.homesection02 ul li{ font-size:14px; line-height:20px;}
+.homesection02 h5{ margin-top:20px;}
+.homesection02 h5 a{ font-size:14px; line-height:24px; padding:8px 20px;}
+
+.homesection03{ padding:16px 0px;}
+.homesection03 h2{ font-size:23px; line-height:normal; margin-bottom:14px;}
+.homesection03-left ul li{ font-size:13px; line-height:22px;}
+.homesection03-left{ margin-bottom:25px;}
+.homesection03-right ul li{ font-size:13px; line-height:22px;}
+
+.pricesec h3{ font-size:22px; line-height:24px; margin-bottom:15px;}
+.pricesec h6{ font-size:15px; line-height:23px;}
+.pricesec h5 a{ font-size:18px; padding:4px 30px;}
+
+.hometeam-section{ padding:20px 0px;}
+.hometeam-section h2{ font-size:27px; line-height:normal; margin-bottom:22px;}
+.teamsection{ padding-bottom:30px;}
+.teamsection-left{ width:50%; float:none; margin:0px auto 18px auto;}
+.teamsection-right{ width:100%; float:none; margin:0px auto;}
+.hometeam-section01 .owl-pagination{ bottom:0px!important;}
+.teamsection-right p{ text-align:justify;}
+.teamsection-right h5{ font-size:17px;}
+
+.homeabout-section{ padding:18px 0px;}
+.homeabout-section-top h2{ font-size:30px; line-height:normal; margin-bottom:15px;}
+.homeabout-section-top p{ font-size:14px; line-height:normal; text-align:justify;}
+.homeabout-section-bottom01{ width:100%; margin:0px auto 35px auto;}
+
+.homeabout-section-bottom h3{ font-size:20px; line-height:23px; margin-bottom:18px;}
+.homeabout-section-bottom h5{ font-size:16px; line-height:normal;}
+.homeabout-section-bottom h6 a{ font-size:16px; padding:9px 18px;}
+
+.homeabout-section{ min-height:600px;}
+.homeabout-section::before{ min-height:200px;}
+
+.footer-top{ padding:18px 0px;}
+.footer-logo{ padding:10px; text-align:center;  margin:0px auto 30px auto;}
+.homeabout-section-top{ margin-bottom:60px;}
+
+.homeabout-section-bottom01 iframe{ width:100%; min-height:340px;}
+
+
+
+
+
+}
+
+@media only screen and (min-width:320px) and (max-width:479px){
+img{max-width:100%; height:auto;}
+
+header{border:none;}
+.logo-section{margin:0px; width:60%;}
+#cssmenu{margin-bottom:10px;}
+#cssmenu #menu-button{margin:0px; width:45px; height:38px; z-index:9;}
+#cssmenu #menu-button::before{top:12px; right:12px;}
+#cssmenu #menu-button::after{top:18px; right:12px;}
+#cssmenu.align-center > ul{top:0px;}
+#cssmenu #menu-button.menu-opened::before{top:18px;}
+#cssmenu #menu-button.menu-opened::after{top:18px;}
+
+.cbp-af-header{ position:static;}
+.cbp-af-header.cbp-af-header-shrink{}
+.call-section{ display:none;}
+.register a{ border:1px solid #313d43!important; background:#313d43!important; -webkit-border-radius:20px;-moz-border-radius:20px; border-radius:20px;}
+.banner-section .full-img-text h1{ font-size:19px; line-height:20px; margin-bottom:6px;}
+.banner-section .full-img-text h1 span{ font-size:20px; line-height:20px;}
+.banner-section .full-img-text h5{font-size:16px; line-height:20px; margin-bottom:15px;}
+.banner-section .full-img-text h6 a{ font-size:15px; line-height:22px; padding:8px 16px;}
+.banner-section .bx-prev{ left:1%;}
+.banner-section .bx-next{ right:1%;}
+
+.homesection02{ padding:20px 0px;}
+.homesection02 h2{ font-size:21px; line-height:28px;}
+.homesection02 h6{ font-size:15px; line-height:normal; font-weight:400; margin-bottom:15px;}
+
+.homesection02 ul li{ font-size:14px; line-height:20px;}
+.homesection02 h5{ margin-top:20px;}
+.homesection02 h5 a{ font-size:14px; line-height:24px; padding:8px 20px;}
+
+.homesection03{ padding:16px 0px;}
+.homesection03 h2{ font-size:23px; line-height:normal; margin-bottom:14px;}
+.homesection03-left ul li{ font-size:13px; line-height:22px;}
+.homesection03-left{ margin-bottom:25px;}
+.homesection03-right ul li{ font-size:13px; line-height:22px;}
+
+.pricesec h3{ font-size:22px; line-height:24px; margin-bottom:15px;}
+.pricesec h6{ font-size:15px; line-height:23px;}
+.pricesec h5 a{ font-size:18px; padding:4px 30px;}
+
+.hometeam-section{ padding:20px 0px;}
+.hometeam-section h2{ font-size:27px; line-height:normal; margin-bottom:22px;}
+.teamsection{ padding-bottom:30px;}
+.teamsection-left{ width:50%; float:none; margin:0px auto 18px auto;}
+.teamsection-right{ width:100%; float:none; margin:0px auto;}
+.hometeam-section01 .owl-pagination{ bottom:0px!important;}
+.teamsection-right p{ text-align:justify;}
+.teamsection-right h5{ font-size:17px;}
+
+.homeabout-section{ padding:18px 0px;}
+.homeabout-section-top h2{ font-size:30px; line-height:normal; margin-bottom:15px;}
+.homeabout-section-top p{ font-size:14px; line-height:normal; text-align:justify;}
+.homeabout-section-bottom01{ width:100%; margin:0px auto 35px auto;}
+
+.homeabout-section-bottom h3{ font-size:20px; line-height:23px; margin-bottom:18px;}
+.homeabout-section-bottom h5{ font-size:16px; line-height:normal;}
+.homeabout-section-bottom h6 a{ font-size:16px; padding:9px 18px;}
+
+.homeabout-section{ min-height:600px;}
+.homeabout-section::before{ min-height:200px;}
+
+.footer-top{ padding:18px 0px;}
+.footer-logo{ padding:10px; text-align:center;  margin:0px auto 30px auto;}
+.homeabout-section-top{ margin-bottom:60px;}
+
+.homeabout-section-bottom01 iframe{ width:100%; min-height:240px;}
+
+.order-1 {
+	-ms-flex-order: 1;
+	order: 1
+}
+.order-2 {
+	-ms-flex-order: 2;
+	order: 2
+}
+.order-3 {
+	-ms-flex-order: 3;
+	order: 3
+}
+.order-4 {
+	-ms-flex-order: 4;
+	order: 4
+}
+.order-5 {
+	-ms-flex-order: 5;
+	order: 5
+}
+.order-6 {
+	-ms-flex-order: 6;
+	order: 6
+}
+.order-7 {
+	-ms-flex-order: 7;
+	order: 7
+}
+.order-8 {
+	-ms-flex-order: 8;
+	order: 8
+}
+.order-9 {
+	-ms-flex-order: 9;
+	order: 9
+}
+.order-10 {
+	-ms-flex-order: 10;
+	order: 10
+}
+.order-11 {
+	-ms-flex-order: 11;
+	order: 11
+}
+.order-12 {
+	-ms-flex-order: 12;
+	order: 12
+}
+
+}
+
+
+
+

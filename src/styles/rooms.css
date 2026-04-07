@@ -1,0 +1,164 @@
+/* PAGE */
+
+.rooms-page{
+padding:70px 8%;
+background:#fffaf3; /* creme background */
+min-height:100vh;
+color:#333;
+}
+
+.rooms-title{
+text-align:center;
+font-size:34px;
+margin-bottom:20px;
+color:#5b4636;
+font-weight:600;
+letter-spacing:1px;
+}
+
+
+/* GRID (3 cards per row always) */
+
+.rooms-grid{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:35px;
+}
+
+
+/* CARD */
+
+.room-card{
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+cursor:pointer;
+transition:0.35s;
+border:1px solid #f1e8dc;
+}
+
+.room-card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 35px rgba(0,0,0,0.12);
+}
+
+
+/* IMAGE */
+
+.room-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+
+/* BODY */
+
+.room-card-body{
+padding:22px;
+}
+
+.room-card-body h3{
+font-size:20px;
+margin-bottom:10px;
+color:#3b2f2f;
+font-weight:600;
+}
+
+.room-card-body p{
+font-size:14px;
+color:#6b5c4d;
+margin-bottom:18px;
+line-height:1.6;
+}
+
+
+/* FOOTER */
+
+.room-card-footer{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+
+/* PRICE */
+
+.price{
+font-size:18px;
+font-weight:600;
+color:#8b5e34;
+}
+
+
+/* BUTTON */
+
+.book-btn{
+background:#8b5e34;
+border:none;
+padding:9px 16px;
+border-radius:6px;
+color:white;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.book-btn:hover{
+background:#6d4727;
+}
+
+
+
+/* ========================= */
+/* TABLET RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 992px){
+
+.rooms-grid{
+grid-template-columns:repeat(2, 1fr);
+}
+
+}
+
+
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 600px){
+
+.rooms-page{
+padding:50px 6%;
+}
+
+.rooms-grid{
+grid-template-columns:1fr;
+gap:25px;
+}
+
+.room-card img{
+height:200px;
+}
+
+.rooms-title{
+font-size:28px;
+}
+
+}
+.room-capacity {
+  display: flex;
+  gap:5px;
+  font-size: 13px;
+  margin: 5px 0 8px;
+  color: #555;
+}
+
+.room-capacity span {
+  background: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 6px;
+}

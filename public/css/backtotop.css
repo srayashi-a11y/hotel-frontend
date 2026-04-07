@@ -1,0 +1,44 @@
+#back-top {
+	position: fixed;
+	bottom: 40px;
+	right:20px;
+	margin-left: 0;
+	z-index:999;
+	
+}
+
+#back-top a {
+	width:46px; height:46px; margin:0px auto 0px; background:#005f99 ; font-family:'FontAwesome'; color:#fff; font-size:30px; font-weight:700; text-transform:uppercase; transition: all 0.4s ease-in-out 0s; display:inline-table; line-height:41px; -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px;text-align:center; border:#005f99 solid 1px;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a .fa{line-height:41px; -webkit-animation: floating-arrow 1.6s infinite ease-in-out 0s; -o-animation: floating-arrow 1.6s infinite ease-in-out 0s; animation: floating-arrow 1.6s infinite ease-in-out 0s;}
+
+
+
+#back-top a:hover {
+	color: #8cc63f;
+}
+/* arrow icon (span tag) */
+#back-top span {
+	width: 108px;
+	height: 108px;
+	display: block;
+	margin-bottom: 7px;
+	background: #ddd url(up-arrow.png) no-repeat center center;
+	/* rounded corners */
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover span {
+	background-color: #777;
+}
+
+

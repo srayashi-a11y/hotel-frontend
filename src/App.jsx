@@ -15,6 +15,7 @@ import BlogDetails from "./pages/BlogDetails";
 import CommentsPage from "./pages/admin/CommentsPage";
 import AboutUs from "./pages/About";
 import Restaurant from "./pages/Resturant";
+import VerifyBooking from "./pages/VerifyBooking";
 
 
 
@@ -53,6 +54,7 @@ function App() {
         <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path="/admin/comments" element={<CommentsPage />} />
         <Route path="/resturant" element={<Restaurant/>}/>
+        <Route path="/verify-booking/:id" element={<VerifyBooking />} />
       </Routes>
               
 

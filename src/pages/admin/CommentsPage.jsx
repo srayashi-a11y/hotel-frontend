@@ -68,7 +68,7 @@ const CommentsPage = () => {
           className={activeTab === "other" ? "active" : ""}
           onClick={() => setActiveTab("other")}
         >
-         Conrtact Message
+         Contact Message
         </button>
       </div>
 

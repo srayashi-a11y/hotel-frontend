@@ -500,11 +500,11 @@ Booking Details
 <div className="summary-price">
 
 <span>
-${totalPrice}.00 × {rooms} rooms × {nights} nights
+₹{totalPrice}.00 × {rooms} rooms × {nights} nights
 </span>
 
 <b>
-${subtotal.toFixed(2)}
+₹{subtotal.toFixed(2)}
 </b>
 
 </div>
@@ -516,7 +516,7 @@ ${subtotal.toFixed(2)}
 <span>Tax and fees</span>
 
 <span>
-${taxAmount.toFixed(2)}
+₹{taxAmount.toFixed(2)}
 </span>
 
 </div>
@@ -528,7 +528,7 @@ ${taxAmount.toFixed(2)}
 <b>Total</b>
 
 <b>
-${grandTotal.toFixed(2)}
+₹{grandTotal.toFixed(2)}
 </b>
 
 </div>

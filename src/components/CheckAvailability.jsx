@@ -27,103 +27,89 @@ const fetchRoomData = async()=>{
   console.log(err)
  }
 }
-const checkAvailability = async(e)=>{
+const checkAvailability = async (e) => {
+  e.preventDefault();
 
- e.preventDefault()
-
- if(!rooms){
-
-  Swal.fire({
-   icon:"warning",
-   title:"Enter number of rooms"
-  })
-
-  return
- }
- 
-
- try{
-
-  const res = await roomAPI.post(
-  `/rooms/${roomId}/check-availability`,
-  {
-    checkIn,
-    checkOut,
-    rooms
-  },
-  {
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
+  if (!rooms) {
+    Swal.fire({
+      icon: "warning",
+      title: "Enter number of rooms"
+    });
+    return;
   }
-);
 
-  const availableRooms = res.data.availableRooms
+  const token = localStorage.getItem("token");
 
-  setAvailable(availableRooms)
+  // ✅ LOGIN CHECK FIRST
+  if (!token) {
+    Swal.fire({
+      icon: "info",
+      title: "Login Required",
+      html: `
+        <p>Please login first to continue booking.</p>
 
-  if(Number(rooms) > availableRooms){
+        <a href="/login" 
+          style="
+          display:inline-block;
+          margin-top:10px;
+          padding:10px 20px;
+          background:#1f2937;
+          color:white;
+          text-decoration:none;
+          border-radius:5px;">
+          Login Now
+        </a>
+      `,
+      showConfirmButton: false
+    });
+    return;
+  }
 
-   Swal.fire({
-        icon:"warning",
-        title:"Room Not Available",
+  try {
+    const res = await roomAPI.post(
+      `/rooms/${roomId}/check-availability`,
+      {
+        checkIn,
+        checkOut,
+        rooms
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+    );
+
+    const availableRooms = res.data.availableRooms;
+    setAvailable(availableRooms);
+
+    if (Number(rooms) > availableRooms) {
+      Swal.fire({
+        icon: "warning",
+        title: "Room Not Available",
         html: `
-        <p>Sorry, we have only <b>${availableRooms}</b> rooms left.</p>
+          <p>Sorry, we have only <b>${availableRooms}</b> rooms left.</p>
 
-        <div style="margin-top:5px;font-size:16px;">
-        📞 <b>+971 50 123 4567</b>
-        </div>
+          <div style="margin-top:5px;font-size:16px;">
+          📞 <b>+971 50 123 4567</b>
+          </div>
 
-        <div style="margin-top:5px;color:#555;">
-        Call Us for More Information
-        </div>
+          <div style="margin-top:5px;color:#555;">
+          Call Us for More Information
+          </div>
         `,
-        confirmButtonText:"Close"
-        })
-
-   return
-
-  }else{
-
- const token = localStorage.getItem("token")
-
- if(!token){
-
-  Swal.fire({
-   icon:"info",
-   title:"Login Required",
-   html:`
-    <p>Please login first to continue booking.</p>
-
-    <a href="/login" 
-       style="
-       display:inline-block;
-       margin-top:10px;
-       padding:10px 20px;
-       background:#1f2937;
-       color:white;
-       text-decoration:none;
-       border-radius:5px;">
-       Login Now
-    </a>
-   `,
-    showConfirmButton:false
-    })
-
-    return
-
+        confirmButtonText: "Close"
+      });
+      return;
     }
 
-    await fetchRoomData()
-    setShowOptions(true)
+    await fetchRoomData();
+    setShowOptions(true);
 
-    }
-
- }catch(err){
-  console.log(err)
- }
-
-}
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 return(
 

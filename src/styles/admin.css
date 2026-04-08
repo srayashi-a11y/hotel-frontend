@@ -1567,3 +1567,17 @@ comment
     left: 0;
   }
 }
+.toolbar-btn {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.toolbar-btn.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}

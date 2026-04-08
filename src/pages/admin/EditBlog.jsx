@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import blogAPI, { IMAGE_BASE_URL } from "../../services/blogAPI";
 import Swal from "sweetalert2";
-import { useQuill } from "react-quilljs";
-import "quill/dist/quill.snow.css";
+
+import { useEditor, EditorContent } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import Link from "@tiptap/extension-link";
+import Placeholder from "@tiptap/extension-placeholder";
 
 function EditBlog({ blog, onClose, onUpdated }) {
 
@@ -16,24 +19,41 @@ function EditBlog({ blog, onClose, onUpdated }) {
 
   const fileInputRef = useRef(null);
 
-  // ✅ Quill
-  const { quill, quillRef } = useQuill();
+  // =========================
+  // 🟢 TIPTAP EDITOR (REPLACED QUILL)
+  // =========================
+  const editor = useEditor({
+    extensions: [
+      StarterKit.configure({
+        heading: {
+          levels: [1, 2, 3, 4, 5, 6]
+        }
+      }),
+      Link.configure({
+        openOnClick: true
+      }),
+      Placeholder.configure({
+        placeholder: "Write your blog content..."
+      })
+    ],
+    content: "",
+  });
 
-  // ✅ Prefill data (FIXED)
+  // ✅ Prefill data
   useEffect(() => {
-    if (blog && quill) {
+    if (blog && editor) {
 
       setForm({
         title: blog.title || "",
         shortdes: blog.shortdes || ""
       });
 
-      // ✅ set content properly
-      quill.clipboard.dangerouslyPasteHTML(blog.content || "");
+      // ✅ set editor content
+      editor.commands.setContent(blog.content || "");
 
       setPreview(blog.image ? `${IMAGE_BASE_URL}${blog.image}` : "");
     }
-  }, [blog, quill]);
+  }, [blog, editor]);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -51,7 +71,7 @@ function EditBlog({ blog, onClose, onUpdated }) {
   const handleUpdate = async (e) => {
     e.preventDefault();
 
-    const content = quill?.root.innerHTML || "";
+    const content = editor?.getHTML() || "";
 
     const cleanContent = content.replace(/<(.|\n)*?>/g, "").trim();
 
@@ -89,6 +109,8 @@ function EditBlog({ blog, onClose, onUpdated }) {
       Swal.fire("Error", "Update failed", "error");
     }
   };
+
+  if (!editor) return null;
 
   return (
     <div className="blog-modal-overlay">
@@ -137,15 +159,97 @@ function EditBlog({ blog, onClose, onUpdated }) {
             />
           )}
 
-          {/* Quill Editor */}
-          <div style={{ marginTop: "20px" }}>
-            <h4>Modern Editor</h4>
+          {/* ========================= */}
+          {/* 🟢 TIPTAP EDITOR (REPLACED QUILL UI) */}
+          {/* ========================= */}
+          {/* ========================= */}
+{/* 🟢 TOOLBAR (ALL BUTTONS FIXED) */}
+{/* ========================= */}
 
-            <div
-              ref={quillRef}
-              style={{ background: "#fff", height: "200px" }}
-            />
-          </div>
+<div
+  style={{
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "6px",
+    marginBottom: "10px",
+    padding: "8px",
+    border: "1px solid #ddd",
+    borderRadius: "6px",
+    background: "#fff"
+  }}
+>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleBold().run()}>
+    B
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleItalic().run()}>
+    I
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleStrike().run()}>
+    S
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}>
+    H1
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}>
+    H2
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}>
+    H3
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}>
+    H4
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 5 }).run()}>
+    H5
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}>
+    H6
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleBulletList().run()}>
+    UL
+  </button>
+
+  <button type="button" onClick={() => editor.chain().focus().toggleOrderedList().run()}>
+    OL
+  </button>
+
+  <button
+    type="button"
+    onClick={() => {
+      const url = prompt("Enter URL");
+      if (url) editor.chain().focus().setLink({ href: url }).run();
+    }}
+  >
+    Link
+  </button>
+
+</div>
+
+{/* ========================= */}
+{/* 🟢 EDITOR */}
+{/* ========================= */}
+
+<div
+  style={{
+    border: "1px solid #ddd",
+    borderRadius: "8px",
+    padding: "10px",
+    background: "#fff",
+    minHeight: "200px"
+  }}
+>
+  <EditorContent editor={editor} />
+</div>
 
           {/* Buttons */}
           <div style={{ display: "flex", gap: "10px", marginTop: "15px" }}>
@@ -173,3 +277,4 @@ function EditBlog({ blog, onClose, onUpdated }) {
 }
 
 export default EditBlog;
+

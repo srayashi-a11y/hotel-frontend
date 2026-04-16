@@ -36,7 +36,7 @@ return(
 
 <h4 className="option-heading">Meal Options</h4>
 
-<label className={`option-row ${meal===50 ? "active-option" : ""}`}>
+<label className={`option-row ${meal===100 ? "active-option" : ""}`}>
 <div className="option-left">
 <input type="radio" name="meal" onChange={()=>setMeal(50)} />
 <span>Breakfast included</span>
@@ -52,7 +52,7 @@ return(
 <span className="option-price free">₹0.00</span>
 </label>
 
-<label className={`option-row ${meal===90 ? "active-option" : ""}`}>
+<label className={`option-row ${meal===250 ? "active-option" : ""}`}>
 <div className="option-left">
 <input type="radio" name="meal" onChange={()=>setMeal(90)} />
 <span>Breakfast & Dinner</span>
@@ -73,7 +73,7 @@ return(
 <span className="option-price free">₹0.00</span>
 </label>
 
-<label className={`option-row ${cancel===10 ? "active-option" : ""}`}>
+<label className={`option-row ${cancel===150 ? "active-option" : ""}`}>
 <div className="option-left">
 <input type="radio" name="cancel" onChange={()=>setCancel(10)} />
 <span>Free cancellation</span>
@@ -105,11 +105,11 @@ roomImage: IMAGE_BASE_URL + roomImage,
 
   rooms,
 
-mealText: meal===50 ? "Breakfast included" :
-meal===90 ? "Breakfast & Dinner included" :
+mealText: meal===100 ? "Breakfast included" :
+meal===250 ? "Breakfast & Dinner included" :
 "No meal",
 
-cancelOption: cancel===10 ? "free" : "non-refundable",
+cancelOption: cancel===150 ? "free" : "non-refundable",
 cancelPrice: cancel,
 
 pricePerNight,

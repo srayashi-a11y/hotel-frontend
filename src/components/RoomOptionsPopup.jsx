@@ -41,7 +41,7 @@ return(
 <input type="radio" name="meal" onChange={()=>setMeal(50)} />
 <span>Breakfast included</span>
 </div>
-<span className="option-price">$50.00</span>
+<span className="option-price">₹100.00</span>
 </label>
 
 <label className={`option-row ${meal===0 ? "active-option" : ""}`}>
@@ -49,7 +49,7 @@ return(
 <input type="radio" name="meal" defaultChecked onChange={()=>setMeal(0)} />
 <span>No breakfast</span>
 </div>
-<span className="option-price free">$0.00</span>
+<span className="option-price free">₹0.00</span>
 </label>
 
 <label className={`option-row ${meal===90 ? "active-option" : ""}`}>
@@ -57,7 +57,7 @@ return(
 <input type="radio" name="meal" onChange={()=>setMeal(90)} />
 <span>Breakfast & Dinner</span>
 </div>
-<span className="option-price">$90.00</span>
+<span className="option-price">₹250.00</span>
 </label>
 
 
@@ -70,7 +70,7 @@ return(
 <input type="radio" name="cancel" defaultChecked onChange={()=>setCancel(0)} />
 <span>Non-refundable</span>
 </div>
-<span className="option-price free">$0.00</span>
+<span className="option-price free">₹0.00</span>
 </label>
 
 <label className={`option-row ${cancel===10 ? "active-option" : ""}`}>
@@ -78,7 +78,7 @@ return(
 <input type="radio" name="cancel" onChange={()=>setCancel(10)} />
 <span>Free cancellation</span>
 </div>
-<span className="option-price">$10.00</span>
+<span className="option-price">₹150.00</span>
 </label>
 
 <hr/>

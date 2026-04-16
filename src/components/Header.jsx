@@ -77,10 +77,10 @@ return (
   <div className="mobile-menu-dropdown">
     <ul>
       <li><NavLink to="/">Home</NavLink></li>
-      <li><NavLink to="/blogs">Blog</NavLink></li>
       <li><NavLink to="/room">Room</NavLink></li>
       <li><NavLink to="/about">Who We Are</NavLink></li>
       <li><NavLink to="/resturant">Restaurant</NavLink></li>
+      <li><NavLink to="/blogs">Blog</NavLink></li>
       <li><NavLink to="/contact">Contact</NavLink></li>
     </ul>
   </div>
@@ -118,11 +118,7 @@ Home
 </NavLink>
 </li>
 
-<li>
-<NavLink to="/blogs">
-BLOG
-</NavLink>
-</li>
+
 
 <li>
 <NavLink to="/room">
@@ -138,6 +134,11 @@ WHO WE ARE
 <li>
 <NavLink to="/resturant">
 Resturant
+</NavLink>
+</li>
+<li>
+<NavLink to="/blogs">
+BLOG
 </NavLink>
 </li>
 <li>

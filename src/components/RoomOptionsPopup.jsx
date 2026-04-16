@@ -87,7 +87,7 @@ return(
 
 <div className="price-box">
 <p>Total / Night</p>
-<h2>${totalPrice}</h2>
+<h2>₹{totalPrice}</h2>
 </div>
 
 <button
